@@ -1,0 +1,5 @@
+Pipeworks is a program that bounces a drone around inside a box.
+
+The trick is there are four quadrants to the box, each controlled
+by its own child process.
+
