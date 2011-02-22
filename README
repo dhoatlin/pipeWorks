@@ -1,5 +1,12 @@
 Pipeworks is a program that bounces a drone around inside a box.
 
-The trick is there are four quadrants to the box, each controlled
-by its own child process.
+There are two versions of this program.
+
+dynamicPipe takes two parameters describing the number of rows and columns within the box.
+Each cell is its own process and needs to talk to adjacent processes in order to pass the drone on.
+Every process/cell has its own struct defining boundries and pipes to neighbors making certain checks
+(like testing boundries) a lot easier.
+
+pipe takes no parameters and just creates a box with 4 sections. This uses an old version of process cells
+that I got rid of in dynamicPipe.
 
